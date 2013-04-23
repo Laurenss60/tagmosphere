@@ -1,0 +1,41 @@
+Entities\Photo:
+  type: entity
+  table: photo
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    photo:
+      type: text
+      nullable: false
+    atmosphere:
+      type: integer
+      unsigned: false
+      nullable: false
+    created:
+      type: datetime
+      nullable: false
+  oneToOne:
+    user:
+      targetEntity: Entities\User
+      cascade: {  }
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        user_id:
+          referencedColumnName: id
+      orphanRemoval: false
+    location:
+      targetEntity: Entities\Location
+      cascade: {  }
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        location_id:
+          referencedColumnName: id
+      orphanRemoval: false
+  lifecycleCallbacks: {  }

@@ -1,0 +1,33 @@
+Entities\Location:
+  type: entity
+  table: location
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    name:
+      type: string
+      length: 128
+      fixed: false
+      nullable: false
+    lat:
+      type: decimal
+      nullable: false
+    lng:
+      type: decimal
+      nullable: false
+  oneToOne:
+    category:
+      targetEntity: Entities\Category
+      cascade: {  }
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        category_id:
+          referencedColumnName: id
+      orphanRemoval: false
+  lifecycleCallbacks: {  }

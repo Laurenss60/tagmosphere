@@ -1,0 +1,45 @@
+Entities\User:
+  type: entity
+  table: user
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    username:
+      type: string
+      length: 16
+      fixed: false
+      nullable: false
+    password:
+      type: string
+      length: 32
+      fixed: false
+      nullable: false
+    facebookid:
+      type: integer
+      unsigned: false
+      nullable: true
+    emailaddress:
+      type: string
+      length: 128
+      fixed: false
+      nullable: false
+    firstname:
+      type: string
+      length: 64
+      fixed: false
+      nullable: false
+    lastname:
+      type: string
+      length: 64
+      fixed: false
+      nullable: false
+    access:
+      type: integer
+      unsigned: false
+      nullable: false
+  lifecycleCallbacks: {  }

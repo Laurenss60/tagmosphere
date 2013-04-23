@@ -1,0 +1,177 @@
+body{
+  padding-top: 124px;
+}
+#top-nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 10;
+}
+#page-nav{
+  position: fixed;
+  z-index: 9;
+}
+
+#fixed-bg-top{
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  height: 120px;
+  background: #fff;
+  z-index: 8;
+}
+#fixed-bg-bottom{
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  height: 20px;
+  background: #fff;
+  z-index: 8;
+}
+
+/* Locations */
+#maps-container-mobile{
+  height: 220px;
+  margin-bottom: 0px;
+}
+#mobileMap .close{
+  position: absolute;
+  margin-top: -13px;
+  margin-left: -13px;
+}
+
+/* others */
+.error-text{
+  color: #d14;
+}
+.progress{
+  width: 100%;
+}
+
+
+/* ### MEDIA QUERYIES ### */
+/* Large desktop */
+@media (min-width: 1200px) { 
+  /* DEFAULTS */
+  #page-nav{
+    width: 1170px;
+    margin-left: -585px;
+    top: 60px;
+    left: 50%;
+    padding: 0;
+  }
+  .stacktable-hide-desktop{
+    display: none;
+  }
+  
+  /* DASHBOARD */
+  .charts{
+    height: 300px;
+  }
+  /* LOCATIONS */
+  #maps-container{
+    position: fixed;
+    top: 120px;
+    width: 770px;
+    height: calc(100% - 140px);
+    height: -webkit-calc(100% - 140px);
+    margin: 0 0 0 400px;
+  }
+}
+/* Desktop */
+@media (min-width: 980px) and (max-width: 1199px){
+  /* DEFAULTS */
+  #page-nav{
+    width: 940px;
+    margin-left: -470px;
+    top: 60px;
+    left: 50%;
+    padding: 0;
+  }
+  .stacktable-hide-desktop{
+    display: none;
+  }
+  
+  /* DASHBOARD */
+  .charts{
+    height: 300px;
+  }
+  /* LOCATIONS */
+  #maps-container{
+    position: fixed;
+    top: 120px;
+    width: 620px;
+    height: calc(100% - 140px);
+    height: -webkit-calc(100% - 140px);
+    margin: 0 0 0 320px;
+  }
+}
+/* Portrait tablet to landscape */
+@media (min-width: 768px) and (max-width: 979px){
+  /* DEFAULTS */
+  #page-nav{
+    width: 724px;
+    margin-left: -362px;
+    top: 70px;
+    left: 50%;
+    padding: 0;
+  }
+  
+  /* DASHBOARD */
+  .charts{
+    height: 240px;
+  }
+  /* LOCATIONS */
+  #locations-container{
+    margin-top: 10px;
+  }
+  #maps-container{
+    position: fixed;
+    top: 130px;
+    width: 476px;
+    height: calc(100% - 140px);
+    height: -webkit-calc(100% - 140px);
+    margin: 0 0 0 248px;
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (min-width: 481px) and (max-width: 767px){ 
+  /* DEFAULTS */
+  body{
+    padding-top: 155px;
+  }
+  #page-nav{
+    width: calc(100% - 40px);
+    width: -webkit-calc(100% - 40px);
+    top: 55px;
+  }
+  #fixed-bg-top{
+    height: 155px;
+  }
+  
+  /* DASHBOARD */
+  .charts{
+    height: 400px;
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px){
+  /* DEFAULTS */
+  body{
+    padding-top: 160px;
+  }
+  #page-nav{
+    width: calc(100% - 40px);
+    width: -webkit-calc(100% - 40px);
+    top: 55px;
+  }
+  #fixed-bg-top{
+    height: 155px;
+  }
+  
+  /* DASHBOARD */
+  .charts{
+    height: 320px;
+  }
+}

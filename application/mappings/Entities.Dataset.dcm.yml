@@ -1,0 +1,40 @@
+Entities\Dataset:
+  type: entity
+  table: dataset
+  fields:
+    id:
+      id: true
+      type: integer
+      unsigned: false
+      nullable: false
+      generator:
+        strategy: IDENTITY
+    name:
+      type: string
+      length: 64
+      fixed: false
+      nullable: false
+    url:
+      type: string
+      length: 128
+      fixed: false
+      nullable: false
+    nametag:
+      type: string
+      length: 32
+      fixed: false
+      nullable: false
+    updated:
+      type: datetime
+      nullable: true
+  oneToOne:
+    category:
+      targetEntity: Entities\Category
+      cascade: {  }
+      mappedBy: null
+      inversedBy: null
+      joinColumns:
+        category_id:
+          referencedColumnName: id
+      orphanRemoval: false
+  lifecycleCallbacks: {  }
